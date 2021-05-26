@@ -322,6 +322,52 @@
         "module_tags": []
     },
     {
+        "name": "restock-antenna-stack-2",
+        "title": "Communotron DTS-J1",
+        "description": "",
+        "mod": "ReStock Plus",
+        "cost": 5,
+        "entry_cost": 500,
+        "category": "COMMS",
+        "info": "Dish",
+        "year": "1961",
+        "technology": "interplanetaryComms",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "",
+        "engine_config": "",
+        "upgrade": false,
+        "entry_cost_mods": "",
+        "identical_part_name": "",
+        "module_tags": [
+            "Instruments"
+        ]
+    },
+    {
+        "name": "restock-antenna-stack-3",
+        "title": "Communotron HG-61",
+        "description": "",
+        "mod": "ReStock Plus",
+        "cost": 10,
+        "entry_cost": 1000,
+        "category": "COMMS",
+        "info": "Dish",
+        "year": "1962",
+        "technology": "interplanetaryComms",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "",
+        "engine_config": "",
+        "upgrade": false,
+        "entry_cost_mods": "",
+        "identical_part_name": "",
+        "module_tags": [
+            "Instruments"
+        ]
+    },
+    {
         "name": "restock-battery-375-1",
         "title": "3.75m Rechargeable Battery",
         "description": "",
@@ -443,6 +489,30 @@
         ]
     },
     {
+        "name": "restock-engine-125-valiant",
+        "title": "Viking Series engine",
+        "description": "",
+        "mod": "ReStock Plus",
+        "cost": 300,
+        "entry_cost": 0,
+        "category": "ORBITAL",
+        "info": "",
+        "year": "1959",
+        "technology": "orbitalRocketry1959",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "Ariane",
+        "engine_config": "Viking",
+        "upgrade": false,
+        "entry_cost_mods": "Viking-2",
+        "identical_part_name": "",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Toxic"
+        ]
+    },
+    {
         "name": "restock-engine-375-corgi",
         "title": "Exploration Upper Stage Engines",
         "description": "",
@@ -473,8 +543,8 @@
         "title": "F-1B",
         "description": "The F-1B engine was designed to power the proposed Pyrios advanced boosters for the Space Launch System. A highly modified version of the original F-1, the F-1B uses modern manufacturing techniques including 3D printing and features a simpler gas generator exhaust arrangment in order to reduce manufacturing costs and increase thrust at a slight cost of efficiency. Mount size can be adjusted from 2.5m to 10m in 1m increments. Diameter: [3.61 m]. Plume configured by RealPlume.",
         "mod": "ReStock Plus",
-        "cost": "5000",
-        "entry_cost": "409361",
+        "cost": "1448",
+        "entry_cost": "0",
         "category": "ORBITAL",
         "info": "",
         "year": "2022",
@@ -586,6 +656,32 @@
         "entry_cost_mods": "",
         "identical_part_name": "",
         "module_tags": []
+    },
+    {
+        "name": "restock-pod-sphere-1",
+        "title": "Vostok Capsule",
+        "description": "",
+        "mod": "ReStock Plus",
+        "cost": "1600",
+        "entry_cost": "0",
+        "category": "COMMAND",
+        "info": "",
+        "year": "1961",
+        "technology": "basicCapsules",
+        "ro": false,
+        "orphan": false,
+        "rp0_conf": false,
+        "spacecraft": "Vostok",
+        "engine_config": "",
+        "upgrade": false,
+        "entry_cost_mods": "capsulesVostok",
+        "identical_part_name": "VostokCapsule",
+        "module_tags": [
+            "HumanRated",
+            "NoEVA",
+            "NoResourceCostMult",
+            "Reentry"
+        ]
     },
     {
         "name": "restock-rcs-block-dual-1",
@@ -861,6 +957,29 @@
         "module_tags": []
     },
     {
+        "name": "restock-relay-radial-2",
+        "title": "HG-20 High Gain Antenna",
+        "description": "",
+        "mod": "ReStock Plus",
+        "cost": 5,
+        "entry_cost": 500,
+        "category": "COMMS",
+        "info": "Dish",
+        "year": "1962",
+        "technology": "interplanetaryComms",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "",
+        "engine_config": "",
+        "upgrade": false,
+        "entry_cost_mods": "",
+        "identical_part_name": "",
+        "module_tags": [
+            "Instruments"
+        ]
+    },
+    {
         "name": "restock-separator-1875-1",
         "title": "Stack Separator",
         "description": "",
@@ -913,8 +1032,8 @@
         "title": "Castor 120",
         "description": "The Castor 120 is a medium solid booster used on the Minotaur and Athena launch vehicles. Its design was based on the TU-903, which serves as the first stage of the Peacekeeper ICBM. The standard thrust curve can be modified to produce a regressive burn that reduces maximum acceleration or a saddle-shaped profile that limits aerodynamic forces. Burn time 79 seconds. Diameter: [2.34 m]. Plume configured by RealPlume.",
         "mod": "ReStock Plus",
-        "cost": "10630",
-        "entry_cost": "212600",
+        "cost": "750",
+        "entry_cost": "0",
         "category": "SOLID",
         "info": "FS SRM",
         "year": "1989",

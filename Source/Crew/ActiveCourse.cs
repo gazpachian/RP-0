@@ -13,7 +13,6 @@ namespace RP0.Crew
         public double startTime = 0d;
         public bool Started = false, Completed = false;
 
-
         public ActiveCourse(CourseTemplate template)
         {
             sourceNode = template.sourceNode;
@@ -73,9 +72,9 @@ namespace RP0.Crew
 
         public bool MeetsStudentReqs(ProtoCrewMember student)
         {
-            if (!((student.type == (ProtoCrewMember.KerbalType.Crew) && (seatMax <= 0 || Students.Count < seatMax) && !student.inactive 
+            if (!(student.type == ProtoCrewMember.KerbalType.Crew && (seatMax <= 0 || Students.Count < seatMax) && !student.inactive 
                 && student.rosterStatus == ProtoCrewMember.RosterStatus.Available && student.experienceLevel >= minLevel && student.experienceLevel <= maxLevel 
-                && (classes.Length == 0 || classes.Contains(student.trait)) && !Students.Contains(student))))
+                && (classes.Length == 0 || classes.Contains(student.trait)) && !Students.Contains(student)))
                 return false;
 
             int pCount = preReqs.GetLength(0);
@@ -145,6 +144,10 @@ namespace RP0.Crew
                     UnityEngine.Debug.Log("[FS] Kerbal removed from in-progress class!");
                     //TODO: Assign partial rewards, based on what the REWARD nodes think
                     student.inactive = false;
+                    if (Students.Count == 0)
+                    {
+                        CompleteCourse();   // cancel the course
+                    }
                 }
             }
         }
@@ -165,7 +168,7 @@ namespace RP0.Crew
             if (Started)
                 start = startTime;
             else
-                start = Planetarium.GetUniversalTime();
+                start = KSPUtils.GetUT();
             length = GetTime();
             return start + length;
         }
@@ -203,7 +206,7 @@ namespace RP0.Crew
                             for (int i = student.careerLog.Count; i-- > 0;)
                             {
                                 FlightLog.Entry e = student.careerLog.Entries[i];
-                                if (CrewHandler.TrainingExpiration.Compare(v.value, e))
+                                if (TrainingExpiration.Compare(v.value, e))
                                 {
                                     e.type = "expired_" + e.type;
                                     CrewHandler.Instance.RemoveExpiration(student.name, v.value);
@@ -218,17 +221,17 @@ namespace RP0.Crew
                         if (student.flightLog.Count > 0)
                             student.ArchiveFlightLog();
 
-                        CrewHandler.TrainingExpiration exp = null;
+                        TrainingExpiration exp = null;
                         if (expiration > 0d)
                         {
-                            exp = new CrewHandler.TrainingExpiration();
-                            exp.pcmName = student.name;
-                            exp.expiration = expiration;
+                            exp = new TrainingExpiration();
+                            exp.PcmName = student.name;
+                            exp.Expiration = expiration;
                             if (expirationUseStupid)
-                                exp.expiration *= UtilMath.Lerp(CrewHandler.Instance.settings.trainingProficiencyStupidMin,
-                                    CrewHandler.Instance.settings.trainingProficiencyStupidMax,
+                                exp.Expiration *= UtilMath.Lerp(CrewHandler.Settings.trainingProficiencyStupidMin,
+                                    CrewHandler.Settings.trainingProficiencyStupidMax,
                                     student.stupidity);
-                            exp.expiration += Planetarium.GetUniversalTime();
+                            exp.Expiration += KSPUtils.GetUT();
                         }
 
                         bool prevMissionsAlreadyExpired = false;
@@ -238,13 +241,13 @@ namespace RP0.Crew
                             string trainingType = s[0];
                             string trainingTarget = s.Length == 1 ? null : s[1];
 
-                            if (!prevMissionsAlreadyExpired && trainingType == "TRAINING_mission")
+                            if (!prevMissionsAlreadyExpired && trainingType == CrewHandler.TrainingType_Mission)
                             {
                                 // Expire any previous mission trainings because only 1 should be active at a time
                                 for (int i = student.careerLog.Count; i-- > 0;)
                                 {
                                     FlightLog.Entry e = student.careerLog.Entries[i];
-                                    if (e.type == "TRAINING_mission")
+                                    if (e.type == CrewHandler.TrainingType_Mission)
                                     {
                                         e.type = "expired_" + e.type;
                                         CrewHandler.Instance.RemoveExpiration(student.name, v.value);
@@ -257,7 +260,7 @@ namespace RP0.Crew
                             student.flightLog.AddEntry(trainingType, trainingTarget);
                             student.ArchiveFlightLog();
                             if (expiration > 0d)
-                                exp.entries.Add(v.value);
+                                exp.Entries.Add(v.value);
                         }
 
                         if (expiration > 0d)
@@ -290,7 +293,7 @@ namespace RP0.Crew
 
             Started = true;
 
-            startTime = Planetarium.GetUniversalTime();
+            startTime = KSPUtils.GetUT();
 
             foreach (ProtoCrewMember student in Students)
                 student.SetInactive(GetTime(Students) + 1d);

@@ -168,7 +168,7 @@
         "title": "R-4D HiPAT (445N)",
         "description": "The HiPAT or High Performance Liquid Apogee Thruster. The HiPAT performs orbit-raising manoeuvres for many of the world\u00c3\u00a2\u00e2\u201a\u00ac\u00e2\u201e\u00a2s communication satellite platforms, including the Astrium Eurostar 3000, Boeing Space Systems 702HP, MELCO DS-2000 and Loral LS-1300. The R-4D has also played a critical role in NASA missions such as Cassini's orbit insertion of Saturn. Plume configured by RealPlume.",
         "mod": "Niche Parts",
-        "cost": "200",
+        "cost": "35",
         "entry_cost": "2800",
         "category": "RCS",
         "info": "RCS Engine",
@@ -552,7 +552,9 @@
         "upgrade": false,
         "entry_cost_mods": "S5.98M",
         "identical_part_name": "S5.98M",
-        "module_tags": []
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "PLE",
@@ -606,7 +608,7 @@
         "description": "The Rutherford Engine is the worlds first electric turbo-pumped LOX/RP-1 engine. Rutherford adopts an entirely new propulsion cycle, making use of brushless DC motors and high performance Lithium Polymer batteries to drive its turbo-pumps. The engine is named after the famous New Zealand born physicist Ernest Rutherford. Plume configured by RealPlume.",
         "mod": "Niche Parts",
         "cost": "21",
-        "entry_cost": "15000",
+        "entry_cost": "0",
         "category": "ORBITAL",
         "info": "FS Engine",
         "year": "2017",
@@ -617,9 +619,9 @@
         "orphan": false,
         "rp0_conf": true,
         "spacecraft": "Electron (Rocket Lab)",
-        "engine_config": "",
+        "engine_config": "Rutherford-SL",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "Rutherford-SL",
         "identical_part_name": "Rutherford",
         "module_tags": [
             "EngineLiquidTurbo"
@@ -642,9 +644,9 @@
         "orphan": false,
         "rp0_conf": true,
         "spacecraft": "Electron (Rocket Lab)",
-        "engine_config": "",
+        "engine_config": "RutherfordVac",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "RutherfordVac",
         "identical_part_name": "Rutherford",
         "module_tags": [
             "EngineLiquidTurbo"
@@ -848,20 +850,20 @@
         "description": "The Vernier System as used on the Surveyor Probes. Uses storable hypergolic propellants, has infinite restarts and is not subject to ullage. Throttleable down to 30%. Historically 3 of them were used on the Surveyor probes which landed on the Moon. Diameter: [0.13 m]. Plume configured by RealPlume.",
         "mod": "Niche Parts",
         "cost": "30",
-        "entry_cost": "600",
-        "category": "RCS",
+        "entry_cost": "0",
+        "category": "EDL",
         "info": "RCS Engine",
         "year": "1965",
-        "technology": "earlyDocking",
+        "technology": "earlyLanding",
         "era": "04-ADV",
         "ro": true,
         "rp0": true,
         "orphan": false,
         "rp0_conf": true,
         "spacecraft": "Surveyor",
-        "engine_config": "",
+        "engine_config": "TD339",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "TD-339",
         "identical_part_name": "TD-339",
         "module_tags": [
             "EngineLiquidPF"

@@ -120,7 +120,7 @@
         "description": "Docking port for ASTP",
         "mod": "RN Soviet Rockets",
         "cost": "2500",
-        "entry_cost": "50000",
+        "entry_cost": "0",
         "category": "RCS",
         "info": "Docking",
         "year": "1975",
@@ -133,7 +133,7 @@
         "spacecraft": "APAS-75 (ASTP)",
         "engine_config": "",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "dockingAndro",
         "identical_part_name": "",
         "module_tags": []
     },
@@ -278,7 +278,9 @@
         "upgrade": false,
         "entry_cost_mods": "S5.98M",
         "identical_part_name": "S5.98M",
-        "module_tags": []
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "rn_brizm_tank",
@@ -794,6 +796,78 @@
         "entry_cost_mods": "",
         "identical_part_name": "",
         "module_tags": []
+    },
+    {
+        "name": "rn_kosmos2_rd119",
+        "title": "RD-109/119",
+        "description": "",
+        "mod": "RN Soviet Rockets",
+        "cost": "300",
+        "entry_cost": "0",
+        "category": "ORBITAL",
+        "info": "",
+        "year": "1960",
+        "technology": "orbitalRocketry1960",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "R-7",
+        "engine_config": "RD109",
+        "upgrade": false,
+        "entry_cost_mods": "RD-109-8D711",
+        "identical_part_name": "",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Toxic"
+        ]
+    },
+    {
+        "name": "rn_kosmos2_rd214",
+        "title": "RD-211 Series",
+        "description": "",
+        "mod": "RN Soviet Rockets",
+        "cost": "200",
+        "entry_cost": "0",
+        "category": "ORBITAL",
+        "info": "",
+        "year": "1956",
+        "technology": "orbitalRocketry1956",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "R-12",
+        "engine_config": "RD211",
+        "upgrade": false,
+        "entry_cost_mods": "RD-211-8D57",
+        "identical_part_name": "",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Toxic"
+        ]
+    },
+    {
+        "name": "rn_kosmos3_rd216",
+        "title": "RD-215 Series",
+        "description": "",
+        "mod": "RN Soviet Rockets",
+        "cost": "350",
+        "entry_cost": "0",
+        "category": "ORBITAL",
+        "info": "",
+        "year": "1960",
+        "technology": "orbitalRocketry1960",
+        "ro": true,
+        "orphan": false,
+        "rp0_conf": true,
+        "spacecraft": "Kosmos",
+        "engine_config": "RD215",
+        "upgrade": false,
+        "entry_cost_mods": "RD-215-8D513",
+        "identical_part_name": "",
+        "module_tags": [
+            "EngineLiquidTurbo",
+            "Toxic"
+        ]
     },
     {
         "name": "rn_lk_lander",
@@ -3427,7 +3501,7 @@
         "description": "RD-120 second stage engine for Zenit-2 rocket. Plume configured by RealPlume.",
         "mod": "RN Soviet Rockets",
         "cost": "750",
-        "entry_cost": "4200",
+        "entry_cost": 3500,
         "category": "STAGED",
         "info": "",
         "year": "1985",
@@ -3438,11 +3512,13 @@
         "orphan": false,
         "rp0_conf": false,
         "spacecraft": "Zenit-2",
-        "engine_config": "",
+        "engine_config": "RD120",
         "upgrade": false,
-        "entry_cost_mods": "",
-        "identical_part_name": "",
-        "module_tags": []
+        "entry_cost_mods": "RD-120",
+        "identical_part_name": "RD-120",
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "rn_zenit_rd171",
@@ -3474,7 +3550,7 @@
         "title": "Zenit-2 RD-8",
         "description": "RD-8 second stage vernier engine for Zenit-2 rocket. Four of these nozzles make up one RD-8 engine. Plume configured by RealPlume.",
         "mod": "RN Soviet Rockets",
-        "cost": "750",
+        "cost": 0,
         "entry_cost": "4200",
         "category": "STAGED",
         "info": "",
@@ -3490,7 +3566,9 @@
         "upgrade": false,
         "entry_cost_mods": "",
         "identical_part_name": "",
-        "module_tags": []
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "rn_zenit_stg1",

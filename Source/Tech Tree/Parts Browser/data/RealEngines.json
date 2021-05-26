@@ -75,8 +75,8 @@
         "title": "AJ10Series (Mid)",
         "description": "Small pressure-fed hypergolic upper stage engine. Derivative of the first US liquid rocket engine, the AJ10 series is perhaps the longest-lived of any engine series, a part of the US's first satellite launch vehicle, Vanguard, the Apollo CSM, and even one projected Orion service module. This represents mid-period AJ10s with a nozzle extension and restart capability. Used on Thor-Ablestar and Delta E through Delta N. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "250",
-        "entry_cost": "5000",
+        "cost": "150",
+        "entry_cost": "0",
         "category": "ORBITAL",
         "info": "US Engine",
         "year": "1961",
@@ -101,8 +101,8 @@
         "title": "AJ10-137 (Service Propulsion System)",
         "description": "The Aerojet AJ10-137 rocket engine used on the Apollo Service Module as the Service Propulsion System. Diameter: [3.9 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "700",
-        "entry_cost": "24500",
+        "cost": "350",
+        "entry_cost": "0",
         "category": "ORBITAL",
         "info": "Engine",
         "year": "1968",
@@ -127,8 +127,8 @@
         "title": "AJ10-190",
         "description": "Low thrust pressure-fed hypergolic engine. It was used on the Space Shuttle for orbital insertion, maneuvering and deorbiting. Currently used by the Orion MPCV. Diameter: [1.17 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "400",
-        "entry_cost": "8000",
+        "cost": "300",
+        "entry_cost": "0",
         "category": "ORBITAL",
         "info": "RCS Engine",
         "year": "1981",
@@ -150,8 +150,8 @@
         "title": "AJ10 Series (Early)",
         "description": "Small pressure-fed hypergolic upper stage engine. Derivative of the first US liquid rocket engine, the AJ10 series is perhaps the longest-lived of any engine series, a part of the US's first satellite launch vehicle, Vanguard, the Apollo CSM, and even one projected Orion service module. This is the original Vanguard second stage / Able / Delta configuration, without restart capability. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "150",
-        "entry_cost": "3000",
+        "cost": "100",
+        "entry_cost": "0",
         "category": "ORBITAL",
         "info": "US Engine",
         "year": "1956",
@@ -176,8 +176,8 @@
         "title": "J-2 Series",
         "description": "The Rocketdyne J-2 rocket engine found on the Saturn S-IVB and S-II stages. Ensure you enable roll capability or disable gimbal as required for your application. Diameter: [2.01 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "2000",
-        "entry_cost": "100000",
+        "cost": "1355",
+        "entry_cost": "0",
         "category": "HYDROLOX",
         "info": "US Engine",
         "year": "1966",
@@ -203,7 +203,7 @@
         "description": "",
         "mod": "RealEngines",
         "cost": "100",
-        "entry_cost": "50000",
+        "entry_cost": "0",
         "category": "ORBITAL",
         "info": "",
         "year": "1966",
@@ -216,7 +216,7 @@
         "spacecraft": "Soyuz-7K",
         "engine_config": "KTDU35",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "S5-60",
         "identical_part_name": "",
         "module_tags": []
     },
@@ -226,7 +226,7 @@
         "description": "",
         "mod": "RealEngines",
         "cost": "550",
-        "entry_cost": "11000",
+        "entry_cost": "0",
         "category": "EDL",
         "info": "Engine",
         "year": "1969",
@@ -239,7 +239,7 @@
         "spacecraft": "Apollo LEM",
         "engine_config": "LMAE",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "LMAE",
         "identical_part_name": "Apollo LMAE",
         "module_tags": [
             "EngineLiquidPF"
@@ -251,7 +251,7 @@
         "description": "",
         "mod": "RealEngines",
         "cost": "900",
-        "entry_cost": "18000",
+        "entry_cost": "0",
         "category": "EDL",
         "info": "Engine",
         "year": "1969",
@@ -264,7 +264,7 @@
         "spacecraft": "Apollo LEM",
         "engine_config": "LMDE",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "LMDE-H",
         "identical_part_name": "Apollo LMDE",
         "module_tags": [
             "EngineLiquidPF"
@@ -325,7 +325,7 @@
         "title": "NK-9",
         "description": "Staged combustion kerolox booster engine. Designed by Kuznetsov for the Korolev GR-1 project. Basis for the NK-15 used on the N1, and the NK-33 used today. Diameter: [1.3 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "450",
+        "cost": "350",
         "entry_cost": "0",
         "category": "STAGED",
         "info": "",
@@ -501,8 +501,8 @@
         "title": "RD-0124",
         "description": "An upper stage Kerosene/LOX engine designed for new versions of the Soyuz-2 launchers. To also be used with the Angara family of launchers. Diameter: [1.7 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "1200",
-        "entry_cost": "24000",
+        "cost": "500",
+        "entry_cost": "0",
         "category": "STAGED",
         "info": "",
         "year": "2004",
@@ -542,15 +542,17 @@
         "upgrade": false,
         "entry_cost_mods": "RD-0124",
         "identical_part_name": "RD-0124",
-        "module_tags": []
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "RO-RealEngines-RD-0146",
         "title": "RD-0146",
         "description": "A designed based upon the RL10 series of rocket engines, with a more Russian flavour. Diameter: [1.3 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "2000",
-        "entry_cost": "40000",
+        "cost": "1500",
+        "entry_cost": "0",
         "category": "HYDROLOX",
         "info": "",
         "year": "2020",
@@ -617,7 +619,8 @@
         "entry_cost_mods": "RD-0212",
         "identical_part_name": "RD-0212",
         "module_tags": [
-            "EngineLiquidTurbo"
+            "EngineLiquidTurbo",
+            "Toxic"
         ]
     },
     {
@@ -700,7 +703,7 @@
         "title": "RD-120 Series",
         "description": "The RD-120 is a staged combustion vacuum kerolox engine, used as the main power plant on the Zenit launch vehicle family second stage. Diameter: 2.0 m Plume configured by RealPlume. (PART NOT COSTED BY RP-0 BUT IN CORRECT NODE)",
         "mod": "RealEngines",
-        "cost": "1000",
+        "cost": 750,
         "entry_cost": "3500",
         "category": "STAGED",
         "info": "",
@@ -716,15 +719,17 @@
         "upgrade": false,
         "entry_cost_mods": "RD-120",
         "identical_part_name": "RD-120",
-        "module_tags": []
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "RO-RealEngines-RD-170",
         "title": "RD-170 Series",
         "description": "1980s to present, High TWR, atmospheric booster engine. The RD-170 is the most powerful liquid rocket engine ever flown. Originally developed for the Energia launcher's boosters, the engine consists of four combustion chambers fed by a single turbopump. A modified version, the RD-171, is used on the first stage of the Zenit launch vehicle. Diameter: [3.8 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "5400",
-        "entry_cost": "108000",
+        "cost": "2004",
+        "entry_cost": "0",
         "category": "STAGED",
         "info": "",
         "year": "1987",
@@ -748,8 +753,8 @@
         "title": "RD-180",
         "description": "The RD-180 is a two-chamber derivative of the four-chamber RD-170/171 and powers the first stage of the Atlas V. Diameter: [3.5 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "2700",
-        "entry_cost": "54000",
+        "cost": "1240",
+        "entry_cost": "0",
         "category": "STAGED",
         "info": "",
         "year": "2002",
@@ -773,8 +778,8 @@
         "title": "RD-191",
         "description": "A further continuation of the RD-170/171 series, featuring a single combustion chamber and nozzle. The RD-191 powers the Angara family of launchers, while the RD-151 was used on the Naro-1 launch vehicle and the RD-181 will be used on the Antares 200-series. Diameter: [1.7 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
-        "cost": "1350",
-        "entry_cost": "27000",
+        "cost": "858",
+        "entry_cost": "0",
         "category": "STAGED",
         "info": "",
         "year": "2009",
@@ -848,7 +853,7 @@
         "title": "RD-8",
         "description": "A single-chamber derivative of the RD-8 engine used on the Zenit second stage. Yuzhnoye Design Office concept, featuring dual-axis gimbal control and restart capability for use in upper stages. Diameter: 0.5 m. Plume configured by RealPlume. (PART NOT COSTED BY RP-0 BUT IN CORRECT NODE)",
         "mod": "RealEngines",
-        "cost": "1000",
+        "cost": 0,
         "entry_cost": "3500",
         "category": "STAGED",
         "info": "",
@@ -864,7 +869,9 @@
         "upgrade": false,
         "entry_cost_mods": "RD-8",
         "identical_part_name": "",
-        "module_tags": []
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "RO-RealEngines-RD-805",
@@ -921,7 +928,7 @@
         "title": "Raptor Engine",
         "description": "",
         "mod": "RealEngines",
-        "cost": "3000",
+        "cost": "245",
         "entry_cost": "60000",
         "category": "STAGED",
         "info": "",
@@ -935,7 +942,7 @@
         "spacecraft": "BFR",
         "engine_config": "Raptor",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "Raptor",
         "identical_part_name": "",
         "module_tags": [
             "EngineLiquidTurbo"
@@ -946,7 +953,7 @@
         "title": "Raptor Engine (Vacuum)",
         "description": "",
         "mod": "RealEngines",
-        "cost": "3000",
+        "cost": "245",
         "entry_cost": "60000",
         "category": "STAGED",
         "info": "",
@@ -960,7 +967,7 @@
         "spacecraft": "BFR",
         "engine_config": "Raptor",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "Raptor?Vacuum",
         "identical_part_name": "",
         "module_tags": [
             "EngineLiquidTurbo"
@@ -981,7 +988,7 @@
         "orphan": false,
         "rp0_conf": true,
         "spacecraft": "R-11",
-        "engine_config": "S2.253",
+        "engine_config": "S2_253",
         "upgrade": false,
         "entry_cost_mods": "S2-253",
         "identical_part_name": "",
@@ -1033,7 +1040,9 @@
         "upgrade": false,
         "entry_cost_mods": "S5.98M",
         "identical_part_name": "S5.98M",
-        "module_tags": []
+        "module_tags": [
+            "EngineLiquidTurbo"
+        ]
     },
     {
         "name": "RO-RealEngines-SSME",
@@ -1041,7 +1050,7 @@
         "description": "The RS-25, also known as the Space Shuttle Main Engine (SSME), is a LH2/LOX fuel-rich staged combustion engine. Though complex and expensive, these engines provide very high performance and are extremely reliable. Three of these engines powered each Shuttle Orbiter and four will be used on the core stage of the SLS. Diameter: [2.4 m]. Plume configured by RealPlume.",
         "mod": "RealEngines",
         "cost": "5700",
-        "entry_cost": "114000",
+        "entry_cost": "0",
         "category": "HYDROLOX",
         "info": "US Engine",
         "year": "1981",

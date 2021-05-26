@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
-using KSP;
 
 namespace RP0
 {
@@ -43,14 +41,39 @@ namespace RP0
         public override int SectionOrder { get { return 1; } }
         public override bool HasPresets { get { return true; } }
 
-        [GameParameters.CustomParameterUI("Crews require training")]
+        [GameParameters.CustomParameterUI("Crews require proficiency training", toolTip = "Astronauts must complete lengthy proficiency training prior to their first launch in each cockpit or capsule.")]
         public bool IsTrainingEnabled = true;
+
+        [GameParameters.CustomParameterUI("Crews require mission training", toolTip = "Crews also require shorter mission-specific training prior to each launch.")]
+        public bool IsMissionTrainingEnabled = true;
 
         [GameParameters.CustomParameterUI("Enable crew retirement", toolTip = "Re-enabling this option can cause some of the older crewmembers to instantly retire.")]
         public bool IsRetirementEnabled = true;
 
+        [GameParameters.CustomFloatParameterUI("Contract deadline multiplier", toolTip = "Used to lengthen or shorten all contract deadlines.", minValue = 0.5f, maxValue = 5f, stepCount = 46, displayFormat = "N1", gameMode = GameParameters.GameMode.CAREER)]
+        public float ContractDeadlineMult = 1f;
+
         [GameParameters.CustomFloatParameterUI("Maintenance cost multiplier", minValue = 0f, maxValue = 10f, stepCount = 101, displayFormat = "N1", gameMode = GameParameters.GameMode.CAREER)]
         public float MaintenanceCostMult = 1f;
+
+        [GameParameters.CustomParameterUI("Enable part tooling")]
+        public bool IsToolingEnabled = true;
+        
+        [GameParameters.CustomParameterUI("Enable career progress logging")]
+        public bool CareerLogEnabled = true;
+
+        [GameParameters.CustomParameterUI("Kerbalism resource handling for avionics", toolTip = "Use Kerbalism (enabled) or Stock (disabled) rules for resource consumption during the flight scene.")]
+        public bool avionicsUseKerbalism = true;
+
+        [GameParameters.CustomParameterUI("Procedural avionics window auto opens", toolTip = "When enabled, the Procedural Avionics configuration window is automatically opened when you right click on a part with Proc Avionics.")]
+        public bool IsProcAvionicsAutoShown = true;
+
+        public bool AvionicsWindow_ShowInfo1 = true;
+        public bool AvionicsWindow_ShowInfo2 = true;
+        public bool AvionicsWindow_ShowInfo3 = true;
+
+        public string CareerLog_URL;
+        public string CareerLog_Token;
 
         public override void SetDifficultyPreset(GameParameters.Preset preset)
         {
@@ -58,15 +81,40 @@ namespace RP0
             {
                 case GameParameters.Preset.Easy:
                     IsTrainingEnabled = false;
+                    IsMissionTrainingEnabled = false;
                     IsRetirementEnabled = false;
+                    ContractDeadlineMult = 1.7f;
                     break;
                 case GameParameters.Preset.Normal:
+                    IsTrainingEnabled = true;
+                    IsMissionTrainingEnabled = true;
+                    IsRetirementEnabled = true;
+                    ContractDeadlineMult = 1.3f;
+                    break;
                 case GameParameters.Preset.Moderate:
+                    IsTrainingEnabled = true;
+                    IsMissionTrainingEnabled = true;
+                    IsRetirementEnabled = true;
+                    ContractDeadlineMult = 1f;
+                    break;
                 case GameParameters.Preset.Hard:
                     IsTrainingEnabled = true;
+                    IsMissionTrainingEnabled = true;
                     IsRetirementEnabled = true;
+                    ContractDeadlineMult = 0.8f;
                     break;
             }
+        }
+
+        public override bool Interactible(MemberInfo member, GameParameters parameters)
+        {
+            if (member.Name == "IsMissionTrainingEnabled")
+            {
+                IsMissionTrainingEnabled &= IsTrainingEnabled;
+                return IsTrainingEnabled;
+            }
+
+            return base.Interactible(member, parameters);
         }
     }
 }

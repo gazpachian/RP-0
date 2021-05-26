@@ -187,7 +187,7 @@ namespace RP0.Crew
 
             averageStupid /= sC;
 
-            return curTime * UtilMath.Lerp(CrewHandler.Instance.settings.trainingMissionStupidMin, CrewHandler.Instance.settings.trainingMissionStupidMax, averageStupid);
+            return curTime * UtilMath.Lerp(CrewHandler.Settings.trainingMissionStupidMin, CrewHandler.Settings.trainingMissionStupidMax, averageStupid);
         }
 
         public double GetExpiration(ProtoCrewMember pcm)

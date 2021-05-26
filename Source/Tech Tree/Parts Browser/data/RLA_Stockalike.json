@@ -182,7 +182,7 @@
         "entry_cost_mods": "50000,RTGlevel5",
         "identical_part_name": "",
         "module_tags": [
-            "Nuclear"
+            "NuclearRTG"
         ]
     },
     {
@@ -190,7 +190,7 @@
         "title": "J-2T-200/250K",
         "description": "Aerospike. Using proven technology from the J-2 and introducing an aerospike nozzle to the developing J-2S machinery. Diameter: [2.5 m]. Plume configured by RealPlume.",
         "mod": "RLA Stockalike",
-        "cost": "3300",
+        "cost": "2235",
         "entry_cost": "66000",
         "category": "HYDROLOX",
         "info": "",
@@ -243,7 +243,7 @@
         "description": "Deeply throttleable pressure-fed vacuum engine used for the descent module of the Apollo lunar lander. Uses storable propellants which are not subject to boiloff, but are far less efficient than hydrolox or even kerolox. The version used on J-class missions had slightly higher specific impulse (this, along with other changes, gave enough payload capacity for the rover, for example). A later variant (TR-201) was used on Delta as an upper stage engine (on Delta P series); this was a low-cost model with more restarts (4 instead of 2) and slightly higher thrust but lower efficiency and no throttling capability. Diameter: [1.5 m]. Plume configured by RealPlume.",
         "mod": "RLA Stockalike",
         "cost": "900",
-        "entry_cost": "18000",
+        "entry_cost": "0",
         "category": "EDL",
         "info": "Engine",
         "year": "1972",
@@ -256,7 +256,7 @@
         "spacecraft": "TR-201",
         "engine_config": "LMDE (Only the TR-201 Config)",
         "upgrade": false,
-        "entry_cost_mods": "",
+        "entry_cost_mods": "TR-201",
         "identical_part_name": "",
         "module_tags": [
             "EngineLiquidPF"
@@ -576,7 +576,7 @@
         "title": "Castor 4AXL",
         "description": "Small booster attached to larger rockets to give that extra thrust needed to get off the ground and/or with larger payloads. Slightly larger than it's siblings produces a bit more thrust. Plume configured by RealPlume.",
         "mod": "RLA Stockalike",
-        "cost": "1000",
+        "cost": "500",
         "entry_cost": "20000",
         "category": "SOLID",
         "info": "",
@@ -601,8 +601,8 @@
         "title": "Castor 4A",
         "description": "Small booster attached to larger rockets to give that extra thrust needed to get off the ground and/or with larger payloads. Plume configured by RealPlume.",
         "mod": "RLA Stockalike",
-        "cost": "640",
-        "entry_cost": "12020",
+        "cost": "400",
+        "entry_cost": "0",
         "category": "SOLID",
         "info": "",
         "year": "1989",
@@ -626,7 +626,7 @@
         "title": "R-4D-11",
         "description": "490N thrusters as found as the main propulsion of the ESA ATV, and used as various other control thrusters on numerous vehicles. Plume configured by RealPlume. (PART NOT COSTED BY RP-0 BUT IN CORRECT NODE)",
         "mod": "RLA Stockalike",
-        "cost": "60",
+        "cost": "35",
         "entry_cost": "750",
         "category": "RCS",
         "info": "",
@@ -672,7 +672,7 @@
         "title": "AJ-260 FL [6.55 m]",
         "description": "The largest solid rocket motor ever designed, intended for uprated Saturn and Nova applications.  Full-length version, burn time 140s.",
         "mod": "RLA Stockalike",
-        "cost": "",
+        "cost": "0",
         "entry_cost": "661620",
         "category": "SOLID",
         "info": "SRB",
